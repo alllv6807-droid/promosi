@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury ID Card - Noval, Nouval & Putra</title>
+    <meta name="description" content="Premium ID Card Services by Noval, Nouval and Putra - Professional, Elegant, and Secure ID Card Solutions">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e5e7eb;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1e40af;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #6b7280;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #1e40af;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: #1e40af;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #374151;
+            border: 2px solid #d1d5db;
+        }
+
+        .btn-outline:hover {
+            background: #f9fafb;
+        }
+
+        .btn-green {
+            background: #059669;
+            color: white;
+        }
+
+        .btn-green:hover {
+            background: #047857;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 0 4rem;
+            background: linear-gradient(135deg, #dbeafe 0%, #ffffff 50%, #f3e8ff 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #1e40af, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text p {
+            font-size: 1.25rem;
+            color: #6b7280;
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .stats {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #111827;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+
+        .hero-card {
+            position: relative;
+        }
+
+        .id-card {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border-radius: 1rem;
+            padding: 2rem;
+            color: white;
+            transform: rotate(3deg);
+            transition: transform 0.3s;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .id-card:hover {
+            transform: rotate(0deg);
+        }
+
+        /* Founders Section */
+        .founders {
+            padding: 5rem 0;
+            background: #f9fafb;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            font-size: 1.25rem;
+            color: #6b7280;
+        }
+
+        .founders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .founder-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .founder-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .founder-avatar {
+            width: 8rem;
+            height: 8rem;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .founder-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .founder-title {
+            color: #1e40af;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .founder-desc {
+            color: #6b7280;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            padding: 2rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 1rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .service-icon.blue { background: #dbeafe; color: #1e40af; }
+        .service-icon.purple { background: #ede9fe; color: #7c3aed; }
+        .service-icon.green { background: #d1fae5; color: #059669; }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 5rem 0;
+            background: #f9fafb;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .gallery-image {
+            height: 16rem;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        }
+
+        .gallery-content {
+            text-align: center;
+            z-index: 10;
+        }
+
+        .gallery-icon {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .contact-card.whatsapp {
+            background: #dcfce7;
+            border: 1px solid #bbf7d0;
+        }
+
+        .contact-card.email {
+            background: #dbeafe;
+            border: 1px solid #bfdbfe;
+        }
+
+        .contact-card:hover {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-icon {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .contact-icon.whatsapp { background: #bbf7d0; color: #059669; }
+        .contact-icon.email { background: #bfdbfe; color: #1e40af; }
+
+        .contact-info {
+            font-size: 1.25rem;
+            font-family: 'Courier New', monospace;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info.whatsapp { color: #059669; }
+        .contact-info.email { color: #1e40af; }
+
+        /* Footer */
+        .footer {
+            background: #111827;
+            color: white;
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+            color: #9ca3af;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background: #374151;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+            cursor: pointer;
+        }
+
+        .social-link:hover { background: #1e40af; }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 2rem;
+            text-align: center;
+        }
+
+        .founders-credits {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .founders-credits span {
+            color: #9ca3af;
+        }
+
+        .founders-credits .founder {
+            color: white;
+            font-weight: 600;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero-content { grid-template-columns: 1fr; text-align: center; }
+            .hero-text h1 { font-size: 2.5rem; }
+            .hero-buttons { flex-direction: column; }
+            .stats { justify-content: center; }
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: #dbeafe;
+            color: #1e40af;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Icons */
+        .icon {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        .icon-lg {
+            width: 2rem;
+            height: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <span>👑</span>
+                    LuxuryID
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <a href="https://wa.me/6281649041524" class="btn btn-primary" target="_blank">
+                    📱 Get Started
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="badge">🏆 Premium ID Card Services</div>
+                    <h1>
+                        Luxury
+                        <span class="gradient-text">ID Cards</span>
+                        <br>
+                        <span style="font-size: 2rem; color: #6b7280;">Made Perfect</span>
+                    </h1>
+                    <p>Professional, secure, and elegantly designed ID cards with transparent elements. Trusted by thousands of satisfied customers worldwide.</p>
+                    
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/6281649041524" class="btn btn-primary" target="_blank">
+                            📱 Order Now
+                        </a>
+                        <a href="#gallery" class="btn btn-outline">
+                            View Gallery
+                        </a>
+                    </div>
+                    
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">5★</div>
+                            <div class="stat-label">Rating</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Support</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-card">
+                    <div class="id-card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                            <span>👑</span>
+                            <span style="font-size: 0.875rem; opacity: 0.8;">PREMIUM</span>
+                        </div>
+                        <div style="font-size: 1.5rem; font-weight: bold; margin-bottom: 0.5rem;">Sample ID Card</div>
+                        <div style="font-size: 0.875rem; opacity: 0.9; margin-bottom: 1rem;">Transparent Design</div>
+                        <div style="height: 4rem; background: rgba(255,255,255,0.2); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                            <span style="font-size: 2rem; opacity: 0.7;">👥</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founders Section -->
+    <section class="founders">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our Founders</h2>
+                <p>Experienced professionals dedicated to excellence</p>
+            </div>
+            
+            <div class="founders-grid">
+                <div class="founder-card">
+                    <div class="founder-avatar">👨‍💼</div>
+                    <h3 class="founder-name">Noval</h3>
+                    <p class="founder-title">Co-Founder & CEO</p>
+                    <p class="founder-desc">Expert in premium design and customer satisfaction</p>
+                </div>
+                
+                <div class="founder-card">
+                    <div class="founder-avatar">👨‍💻</div>
+                    <h3 class="founder-name">Nouval</h3>
+                    <p class="founder-title">Co-Founder & CTO</p>
+                    <p class="founder-desc">Technology specialist and innovation leader</p>
+                </div>
+                
+                <div class="founder-card">
+                    <div class="founder-avatar">👨‍🔧</div>
+                    <h3 class="founder-name">Putra</h3>
+                    <p class="founder-title">Co-Founder & COO</p>
+                    <p class="founder-desc">Operations expert ensuring quality delivery</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Us?</h2>
+                <p>Premium features that set us apart</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon blue">🛡️</div>
+                    <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">Premium Security</h3>
+                    <p style="color: #6b7280;">Advanced security features with transparent design elements for maximum protection and authenticity verification.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon purple">🏆</div>
+                    <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">Luxury Design</h3>
+                    <p style="color: #6b7280;">Elegant transparent front design with premium materials and sophisticated aesthetics that impress.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon green">⚡</div>
+                    <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">Fast Delivery</h3>
+                    <p style="color: #6b7280;">Quick turnaround time with professional consultation and personalized service from our expert team.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Premium Collection</h2>
+                <p>Transparent elegance meets professional design</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <div class="gallery-overlay"></div>
+                        <div class="gallery-content">
+                            <div class="gallery-icon">🏆</div>
+                            <h3 style="font-weight: bold; font-size: 1.125rem; margin-bottom: 0.5rem;">Premium Card 1</h3>
+                            <p style="font-size: 0.875rem; opacity: 0.9;">Transparent Design</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <div class="gallery-overlay"></div>
+                        <div class="gallery-content">
+                            <div class="gallery-icon">🏆</div>
+                            <h3 style="font-weight: bold; font-size: 1.125rem; margin-bottom: 0.5rem;">Premium Card 2</h3>
+                            <p style="font-size: 0.875rem; opacity: 0.9;">Transparent Design</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <div class="gallery-overlay"></div>
+                        <div class="gallery-content">
+                            <div class="gallery-icon">🏆</div>
+                            <h3 style="font-weight: bold; font-size: 1.125rem; margin-bottom: 0.5rem;">Premium Card 3</h3>
+                            <p style="font-size: 0.875rem; opacity: 0.9;">Transparent Design</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <div class="gallery-overlay"></div>
+                        <div class="gallery-content">
+                            <div class="gallery-icon">🏆</div>
+                            <h3 style="font-weight: bold; font-size: 1.125rem; margin-bottom: 0.5rem;">Premium Card 4</h3>
+                            <p style="font-size: 0.875rem; opacity: 0.9;">Transparent Design</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <div class="gallery-overlay"></div>
+                        <div class="gallery-content">
+                            <div class="gallery-icon">🏆</div>
+                            <h3 style="font-weight: bold; font-size: 1.125rem; margin-bottom: 0.5rem;">Premium Card 5</h3>
+                            <p style="font-size: 0.875rem; opacity: 0.9;">Transparent Design</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <div class="gallery-overlay"></div>
+                        <div class="gallery-content">
+                            <div class="gallery-icon">🏆</div>
+                            <h3 style="font-weight: bold; font-size: 1.125rem; margin-bottom: 0.5rem;">Premium Card 6</h3>
+                            <p style="font-size: 0.875rem; opacity: 0.9;">Transparent Design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Ready to Get Started?</h2>
+                <p>Contact us today for your premium ID card solution</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-card whatsapp">
+                    <div class="contact-icon whatsapp">📱</div>
+                    <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">WhatsApp</h3>
+                    <p class="contact-info whatsapp">081649041524</p>
+                    <a href="https://wa.me/6281649041524" class="btn btn-green" target="_blank">
+                        📱 Chat Now
+                    </a>
+                </div>
+                
+                <div class="contact-card email">
+                    <div class="contact-icon email">📧</div>
+                    <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">Email</h3>
+                    <p class="contact-info email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c1b2a0acafaeb7a0adf1f1f281a6aca0a8adefa2aeac">[email&#160;protected]</a></p>
+                    <a href="/cdn-cgi/l/email-protection#c1b2a0acafaeb7a0adf1f1f281a6aca0a8adefa2aeac" class="btn btn-primary" target="_blank">
+                        📧 Send Email
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                        <span style="font-size: 2rem;">👑</span>
+                        <span style="font-size: 1.5rem; font-weight: bold;">LuxuryID</span>
+                    </div>
+                    <p style="color: #9ca3af;">Premium ID card services with transparent design and luxury aesthetics.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li>Premium ID Cards</li>
+                        <li>Transparent Design</li>
+                        <li>Security Features</li>
+                        <li>Custom Solutions</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>WhatsApp: 081649041524</li>
+                        <li>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1360727e7d7c65727f23232053747e727a7f3d707c7e">[email&#160;protected]</a></li>
+                        <li>24/7 Customer Support</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <div class="social-link">FB</div>
+                        <div class="social-link">TW</div>
+                        <div class="social-link">IG</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p style="color: #9ca3af; margin-bottom: 1rem;">© 2024 LuxuryID. All rights reserved.</p>
+                <div class="founders-credits">
+                    <span>Founded by:</span>
+                    <span class="founder">Noval</span>
+                    <span style="color: #6b7280;">•</span>
+                    <span class="founder">Nouval</span>
+                    <span style="color: #6b7280;">•</span>
+                    <span class="founder">Putra</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+    </script>
+</body>
+</html>
